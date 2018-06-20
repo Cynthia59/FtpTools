@@ -33,7 +33,7 @@ def RunFunc(productName):
         newFile = localPath + '\\' + newFile
         myFc.unzip_file(newFile)
         #如果是分支包类型的，复制分支包
-        if productName == 'AZ':
+        if productName in ['AZ','TJ','GJ','XL','CB','PB','Revit','Tekla','Rhino','MJ']:
             print("正在复制分支包")
             file_dir = newFile.split('.')[0]+'\\release'
             print(file_dir, ' -> ',installPath)
