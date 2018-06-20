@@ -17,8 +17,8 @@ class MyFrame:
     def __init__(self):
         # 创建主窗口
         window = Tk()
-        window.title('算量下载助手')
-        window.geometry('200x320')  #窗口尺寸
+        window.title('PDS下载助手')
+        window.geometry('200x300')  #窗口尺寸
         # 创建一个frame
         frm = Frame(window)
         frm.pack()
@@ -33,16 +33,18 @@ class MyFrame:
         frm_l.pack(side='left')
         frm_r.pack(side='right')
         # 创建产品下载按钮
-        product_l = [('土建', 'TJ'),
-                     ('安装', 'AZ'),
-                     ('钢筋', 'GJ'),
-                     ('下料', 'XL'),
-                     ('场布', 'CB'), ]
-        product_r = [('排布', 'PB'),
-                     ('模架', 'MJ'),
-                     ('万通Revit', 'Revit'),
-                     ('万通Tekla', 'Tekla'),
-                     ('万通Rhino', 'Rhino'), ]
+        product_l = [('BE', 'BE'),
+                     ('BW', 'BW'),
+                     ('Govern', 'Govern'),
+                     ('Plan', 'Plan'),
+                     ('CO', 'CO'),
+                    ]
+        product_r = [('IM', 'IM'),
+                     ('Civil', 'Civil'),
+                     ('个人版BW', 'BW_P'),
+                     ('个人版Plan', 'Plan_P'),
+                     ('备用勿点', ''),
+                    ]
         for k, v in product_l:
             self.btn = Button(frm_l, text=k, textvariable=v, width=10)
             self.btn.bind('<Button-1>', self.download)
